@@ -2,6 +2,7 @@ package juegodamas.tablero;
 
 public class Tablero {
     private String[][] tabler0;
+    String yellow="\033[33m";
     
     //constructor
     public Tablero(){
@@ -14,12 +15,12 @@ public class Tablero {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if ((i+j) % 2 == 0) {
-                    tabler0[i][j] = "O";
+                    tabler0[i][j] = "";
                     System.out.print(tabler0[i][j]);
                 }
                 
                 else{
-                    tabler0[i][j] = "m"; 
+                    tabler0[i][j] = ""; 
                     System.out.print(tabler0[i][j]);
                 }   
             }  
@@ -27,12 +28,11 @@ public class Tablero {
         }
     }
     
-    
     public void llenarTablero(){
         for (int i = 0; i < tabler0.length; i++) {
             for (int j = 0; j < tabler0.length; j++) {
                 if ((i+j) % 2 == 0) {
-                    tabler0[i][j] = "||||||";
+                    tabler0[i][j] = yellow +"||||||";
                     System.out.print(tabler0[i][j]);
                 }
                 
