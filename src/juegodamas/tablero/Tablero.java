@@ -12,15 +12,15 @@ public class Tablero {
     
     //metodos
     public void fichas(){
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if ((i+j) % 2 == 0) {
-                    tabler0[i][j] = "";
+        for (int i = 0; i < tabler0.length; i++) {
+            for (int j = 0; j < tabler0.length; j++) {
+                if ((i+j) % 2 == 0 && j < 3) {
+                    tabler0[i][j] = "X";
                     System.out.print(tabler0[i][j]);
                 }
                 
                 else{
-                    tabler0[i][j] = ""; 
+                    tabler0[i][j] = " "; 
                     System.out.print(tabler0[i][j]);
                 }   
             }  

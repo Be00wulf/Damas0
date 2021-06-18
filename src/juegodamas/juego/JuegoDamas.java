@@ -10,7 +10,6 @@ public class JuegoDamas {
     
     public JuegoDamas(){
         Tablero t1 = new Tablero();
- 
     }
    
 }
