@@ -14,18 +14,18 @@ public class Tablero {
     public void fichas(){
         for (int i = 0; i < tabler0.length; i++) {
             for (int j = 0; j < tabler0.length; j++) {
-                if ((i+j) % 2 == 0 && j < 3) {
-                    tabler0[i][j] = "X";
+                if ((i+j) % 2 == 0) {
+                    tabler0[i][j] = yellow +"||||||";
                     System.out.print(tabler0[i][j]);
                 }
                 
                 else{
-                    tabler0[i][j] = " "; 
+                    tabler0[i][j] = "      "; 
                     System.out.print(tabler0[i][j]);
                 }   
             }  
             System.out.println(" ");
-        }
+        }       
     }
     
     public void llenarTablero(){
