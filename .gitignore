@@ -1,4 +1,4 @@
-*.class
-build/
-*.jar
-dist/
+*class
+*jar
+./build
+./dist
