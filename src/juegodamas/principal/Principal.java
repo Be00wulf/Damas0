@@ -10,7 +10,7 @@ public class Principal {
         /*System.out.println(t1.moverFicha(0, 0, 5, 5));
         t1.pintarTablero();
         
-        System.out.println(t1.moverFicha(5, 5, 1, 1));
+        System.out.println(t1.moverFicha(2, 4, 2, 2));
         t1.pintarTablero();*/
     }
     

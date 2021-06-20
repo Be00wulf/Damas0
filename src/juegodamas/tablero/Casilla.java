@@ -8,7 +8,7 @@ public class Casilla {
     //colores
     public static final String ANSI_WHITE = "\u001B[37m";
     public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
-    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_BLUE_BACKGROUND = "\u001B[44m";
     public static final String ANSI_RESET = "\u001B[0m";
     
@@ -29,7 +29,7 @@ public class Casilla {
             res = imprimir(ANSI_WHITE, linea);
         }
         else{
-            res = imprimir(ANSI_BLUE, linea);
+            res = imprimir(ANSI_GREEN, linea);
         }
 
         return res;

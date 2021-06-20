@@ -7,8 +7,8 @@ public class Ficha {
     private String id;
     
     //CONSTANTES DE colores
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_RED = "\u001B[31m";
     
     //constructor
     public Ficha(boolean esNegra, String id){
@@ -18,7 +18,7 @@ public class Ficha {
     
     //get set
     public String getCaracter(){
-        String res =(esNegra)?"" + ANSI_GREEN + celda: "" + ANSI_YELLOW + celda;
+        String res =(esNegra)?"" + ANSI_PURPLE + celda: "" + ANSI_RED + celda;
         return res;
     }
     
