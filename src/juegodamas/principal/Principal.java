@@ -38,7 +38,7 @@ public class Principal {
                 break;
                 
                 case 3:
-                    System.out.println("ADIOS");
+                    System.out.println("\nADIOS");
                 break;
                 
                 default: System.out.println("\nNO SE HA ENCONTRADO LA OPCIÓN"); 
