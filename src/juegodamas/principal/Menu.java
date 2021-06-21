@@ -9,7 +9,7 @@ import juegodamas.tablero.Tablero;
 public class Menu {
     Scanner entrada = new Scanner(System.in);
     int menuSel, pX, pY, mX, mY;
-    int ficha1 = 12, ficha2 = 12;
+    int ficha1 = 2;
     int sel;
     
     //const
@@ -74,11 +74,11 @@ public class Menu {
                         //t.pintarTablero();
                         System.out.println(t.moverFicha(pX, pY, mX, mY));
                         System.out.println(t.comerFicha(pX, pY, mX, mY));
+                        ficha1--;
                         
-                        
-                    } while (ficha1 > 0 || ficha2 > 0);
+                    } while (ficha1 > 0);
                     
-
+                    System.out.println("HAS GANADO!!!!!!!");
                     mostrarMenuPrincipal();
                 break;
                 
@@ -93,7 +93,7 @@ public class Menu {
                     System.out.println("\nADIOS");
                 break;
                 
-                default: System.out.println("\nNO SE HA ENCONTRADO LA OPCIÃ“N, VUELVE A INTENTAR"); 
+                default: System.out.println("\nNO SE HA ENCONTRADO LA OPCION, VUELVE A INTENTAR"); 
             }
    
         } while (menuSel < 1 || menuSel > 3);

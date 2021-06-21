@@ -23,7 +23,6 @@ public class Tablero {
                     tablero[j][i].setFicha(new Ficha(!esBlanca, id ));
                 }
             }
-
         }
     }
      
