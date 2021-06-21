@@ -2,37 +2,28 @@ package juegodamas.principal;
 
 import java.util.Scanner;
 import juegodamas.jugador.Jugador;
-import juegodamas.pptlg.PiedraPTLS;
+import juegodamas.tablero.Ficha;
 import juegodamas.tablero.*;
 
 public class Principal {
-    Scanner entrada = new Scanner(System.in);
-    int menu, pX, pY, mX, mY;
-    int ficha1 = 12, ficha2 = 12;
-    int sel;
-    
-    public static void main(String[] args) {
-        Principal p1 = new Principal();
+    public static void main(String[] args){
+        Tablero t = new Tablero(8, 8,true);
 
-        
-        
-    }
-    
-    public Principal(){
-        Tablero t1 = new Tablero(8, 8, true);
-        
-        t1.pintarTablero();
-        
-        System.out.println(t1.moverFicha(0, 0, 5, 5));
-        /*t1.pintarTablero();
-        
-        System.out.println(t1.moverFicha(2, 4, 2, 2));
-        t1.pintarTablero();*/
-        
-        
+        t.pintarTablero();
+        System.out.println(t.moverFicha(0, 0, 5, 5));
+        /*t.pintarTablero();
+        System.out.println(t.moverFicha(5, 5, 1, 1));
+        t.pintarTablero();*/
+/* 
+        Celda t = new Celda(true);
+        t.setFicha(new Ficha(true));
+        System.out.println(t.pintarCelda(0));
+        System.out.println(t.pintarCelda(1));
+        System.out.println(t.pintarCelda(2));
+*/
     }
 
-    //metodos
+
     
     
 
