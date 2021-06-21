@@ -4,13 +4,14 @@ public class Casilla {
     private boolean esColor;
     private Ficha ficha; 
     private char celda = '░';
-    private char celdaColor = '█';
+    private char celdaColor = '░';
     //█▓
     public static final String ANSI_WHITE = "\u001B[37m";
     public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_BLUE_BACKGROUND = "\u001B[44m";
     public static final String ANSI_RESET = "\u001B[0m";
+    
     public void setFicha(Ficha f){
         this.ficha = f;
     }
@@ -24,6 +25,13 @@ public class Casilla {
         this.ficha = null;
         return tmp;
     }
+    
+    //se quiere editar INICIO
+    public boolean desocupadaPorFicha(){
+        return (ficha==null);
+    }
+    //se quiere editar FIN
+    
     public boolean ocupadaPorFicha(){
         return (ficha!=null);
     }
@@ -48,8 +56,7 @@ public class Casilla {
                 res="" + color+celdaColor+celdaColor+   ficha.getCaracter()+ficha.getCaracter()+    color+celdaColor+celdaColor;
             if (linea == 1)
                 res=""+color+celdaColor+  ficha.getCaracter()+    ficha.getId()      +ficha.getCaracter()       +color+ celdaColor;
-                //res=""+ color+celdaColor+  ficha.getCaracter()+ficha.getCaracter()+ficha.getCaracter()+ficha.getCaracter()       +color+ celdaColor;
-            
+                
         }else{
             res =""+ color+celdaColor+celdaColor+celdaColor+celdaColor+celdaColor+celdaColor;
         }

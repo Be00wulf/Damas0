@@ -14,8 +14,6 @@ public class Tablero {
         inicializarFichas(0, 3, true, "░░");
         inicializarFichas(5, 8, false, "░░");
 
-        //tablero[0][1].setFicha(new Ficha(false));
-
     }
 
      
@@ -31,7 +29,21 @@ public class Tablero {
         }
     }
      
-     
+    //INICIO EDIT MAJO
+    public boolean  moverFicha(int posXIni, int posYIni, int posXFin, int posYFin){
+        boolean resultado = false;
+        if (tablero[posXIni][posYIni].ocupadaPorFicha()){
+            if (tablero[posXFin][posYFin].ocupadaPorFicha()){
+                tablero[posXFin][posYFin].desocupadaPorFicha();
+                tablero[posXFin][posYFin].setFicha(tablero[posXIni][posYIni].getFicha());
+                resultado = true;
+            }
+        }
+        return resultado;
+    }
+     //FIN EDIT MAJO
+
+     /*
       public boolean moverFicha(int posXIni, int posYIni, int posXFin, int posYFin){
         boolean resultado = false;
         if (tablero[posXIni][posYIni].ocupadaPorFicha()){
@@ -42,6 +54,8 @@ public class Tablero {
         }
         return resultado;
     }
+    */  
+
     private void inicializarTablero(){
         boolean esColorInicio = false;
         boolean esColorIteracion = false;
@@ -62,11 +76,11 @@ public class Tablero {
                 for (int j = 0; j < x; j++) {
                     System.out.print(tablero[j][i].pintarCelda(k));
                 }
-                System.out.println("");
+                System.out.println("   " + i);
             }
             
         }
-        System.out.println("\n\n");
+        System.out.println("\n     0        1          2         3         4         5         6         7\n");
     }
      
 }

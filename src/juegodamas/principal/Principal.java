@@ -1,16 +1,17 @@
 package juegodamas.principal;
 
-import java.util.Scanner;
 import juegodamas.jugador.Jugador;
 import juegodamas.tablero.Ficha;
 import juegodamas.tablero.*;
 
 public class Principal {
+    //globales
+    
+    
     public static void main(String[] args){
-        Tablero t = new Tablero(8, 8,true);
-
-        t.pintarTablero();
-        System.out.println(t.moverFicha(0, 0, 5, 5));
+        Menu m = new Menu();
+        
+        
         /*t.pintarTablero();
         System.out.println(t.moverFicha(5, 5, 1, 1));
         t.pintarTablero();*/
@@ -22,9 +23,5 @@ public class Principal {
         System.out.println(t.pintarCelda(2));
 */
     }
-
-
-    
-    
 
 }
