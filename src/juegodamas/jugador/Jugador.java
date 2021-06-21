@@ -11,17 +11,10 @@ public class Jugador {
     
     //constructor
     public Jugador() {
-        id[0] = 1;
-        id[1] = 2;
-        id[2] = 3;
-        id[3] = 4;
-        id[4] = 5;
-        id[5] = 6;
-        id[6] = 7;
-        id[7] = 8;
-        id[8] = 9;
-        id[9] = 10;
-        
+        for (int i = 0; i < 10; i++) {
+            id[i] = (i+1);
+        }
+
         nombre[0] = "1. Liu";
         nombre[1] = "2. San";
         nombre[2] = "3. Tomoe";
@@ -33,10 +26,17 @@ public class Jugador {
         nombre[8] = "9. Po";
         nombre[9] = "10. Mini-Me";
         
+        est();
 
     }
     
     //metodos
+    public void est(){
+        partidasGanadas[0] = 1;
+        for (int i = 1; i < 10; i++) {
+            partidasGanadas[i] = 0;
+        }
+    }
     
     public String seleccionarPersonaje(){
         mostrarpersonajes();

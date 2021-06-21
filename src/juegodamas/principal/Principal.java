@@ -78,7 +78,7 @@ public class Principal {
                     System.out.println("\nADIOS");
                 break;
                 
-                default: System.out.println("\nNO SE HA ENCONTRADO LA OPCIÓN"); 
+                default: System.out.println("\nNO SE HA ENCONTRADO LA OPCIÓN, VUELVE A INTENTAR"); 
             }
    
         } while (menu < 1 || menu > 3);

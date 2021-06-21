@@ -8,8 +8,10 @@ public class PiedraPTLS {
     
     //constructor
     public PiedraPTLS(){
+        dibujinXD();
         seleccionar();
         yanKenPo();
+        System.out.println("\n\n\n\n");
     }
 
     //metodos
@@ -18,29 +20,36 @@ public class PiedraPTLS {
            if (jugador1 != jugador2 ) {
                 if (jugador1 == 1 && jugador2 == 3 || jugador1 == 1 && jugador2 == 4) {
                     System.out.println("EL JUGADOR 1 HA GANADO");
+                    break;
                 } 
 
                 else if (jugador1 == 2 && jugador2 == 1 ||jugador1 == 2 && jugador2 == 5) {
                     System.out.println("EL JUGADOR 1 HA GANADO");
+                    break;
                
                 } else  if (jugador1 == 3 && jugador2 == 2 || jugador1 == 3 && jugador2 == 4) {
-                    System.out.println("EL JUGADOR 1 HA GANADO");    
+                    System.out.println("EL JUGADOR 1 HA GANADO");   
+                    break;
                
                 } else if (jugador1 == 4 && jugador2 == 2 || jugador1 == 4 && jugador2 == 5) {
                     System.out.println("EL JUGADOR 1 HA GANADO");
+                    break;
                     
                 } else if (jugador1 == 5 && jugador2 == 1 || jugador1 == 5 && jugador2 == 3) {
                     System.out.println("EL JUGADOR 1 HA GANADO");
+                    break;
                 }
                 else {
                     System.out.println("EL JUGADOR 2 HA GANADO");
+                    break;
                 }
 
             } else {
-                System.out.println("\nEMPATE, DECIDAMOSLO EN OTRA RONDA\n");
+                System.out.println("\nEMPATE, DECIDAMOSLO EN OTRA RONDA\n\n\n");
+                seleccionar();
             }
 
-        } while (jugador1 == jugador2);
+        } while (jugador1 != jugador2);
         
     }
     
@@ -73,9 +82,35 @@ public class PiedraPTLS {
                        + "JUGADOR 2, ingresa el numero de la opcion: ");
         jugador2 = entrada.nextInt();
         
-        for (int i = 0; i < 10; i++) {      //para que no vea XD y se "reinicie" la pantalla
-            System.out.println("");         //para que no haga trampa pues 
+        for (int i = 0; i < 4; i++) {      
+            System.out.println("");         //saltos de linea
         }
+    }
+    
+    public void dibujinXD(){
+        System.out.println("     :                                 :\n" +
+"   :                                   :\n" +
+"   :  RRVIttIti+==iiii++iii++=;:,       :\n" +
+"   : IBMMMMWWWWMMMMMBXXVVYYIi=;:,        :\n" +
+"   : tBBMMMWWWMMMMMMBXXXVYIti;;;:,,      :\n" +
+"   t YXIXBMMWMMBMBBRXVIi+==;::;::::       ,\n" +
+"  ;t IVYt+=+iIIVMBYi=:,,,=i+=;:::::,      ;;\n" +
+"  YX=YVIt+=,,:=VWBt;::::=,,:::;;;:;:     ;;;\n" +
+"  VMiXRttItIVRBBWRi:.tXXVVYItiIi==;:   ;;;;\n" +
+"  =XIBWMMMBBBMRMBXi;,tXXRRXXXVYYt+;;: ;;;;;\n" +
+"   =iBWWMMBBMBBWBY;;;,YXRRRRXXVIi;;;:;,;;;=\n" +
+"    iXMMMMMWWBMWMY+;=+IXRRXXVYIi;:;;:,,;;=\n" +
+"    iBRBBMMMMYYXV+:,:;+XRXXVIt+;;:;++::;;;\n" +
+"    =MRRRBMMBBYtt;::::;+VXVIi=;;;:;=+;;;;=\n" +
+"     XBRBBBBBMMBRRVItttYYYYt=;;;;;;==:;=\n" +
+"      VRRRRRBRRRRXRVYYIttiti=::;:::=;=\n" +
+"       YRRRRXXVIIYIiitt+++ii=:;:::;==\n" +
+"       +XRRXIIIIYVVI;i+=;=tt=;::::;:;\n" +
+"        tRRXXVYti++==;;;=iYt;:::::,;;\n" +
+"         IXRRXVVVVYYItiitIIi=:::;,::;\n" +
+"          tVXRRRBBRXVYYYIti;::::,::::\n" +
+"           YVYVYYYYYItti+=:,,,,,:::::;\n" +
+"           YRVI+==;;;;;:,,,,,,,:::::::");
     }
     
 }
