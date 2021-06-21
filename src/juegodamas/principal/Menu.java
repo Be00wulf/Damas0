@@ -3,6 +3,7 @@ package juegodamas.principal;
 import java.util.Scanner;
 import juegodamas.jugador.Jugador;
 import juegodamas.pptlg.PiedraPTLS;
+import juegodamas.tablero.Ficha;
 import juegodamas.tablero.Tablero;
 
 public class Menu {
@@ -72,15 +73,12 @@ public class Menu {
                         
                         //t.pintarTablero();
                         System.out.println(t.moverFicha(pX, pY, mX, mY));
+                        System.out.println(t.comerFicha(pX, pY, mX, mY));
+                        
                         
                     } while (ficha1 > 0 || ficha2 > 0);
                     
-                    
 
-                    
-                    
-                    
-                    
                     mostrarMenuPrincipal();
                 break;
                 

@@ -16,8 +16,6 @@ public class Tablero {
 
     }
 
-     
-     
      private void inicializarFichas(int ini, int cant, boolean esBlanca, String id){
         for (int i = ini; i < cant; i++) {
             for (int j = 0; j < x; j++) {
@@ -30,7 +28,7 @@ public class Tablero {
     }
      
     //INICIO EDIT MAJO
-    public boolean  moverFicha(int posXIni, int posYIni, int posXFin, int posYFin){
+    public boolean  comerFicha(int posXIni, int posYIni, int posXFin, int posYFin){
         boolean resultado = false;
         if (tablero[posXIni][posYIni].ocupadaPorFicha()){
             if (tablero[posXFin][posYFin].ocupadaPorFicha()){
@@ -43,7 +41,6 @@ public class Tablero {
     }
      //FIN EDIT MAJO
 
-     /*
       public boolean moverFicha(int posXIni, int posYIni, int posXFin, int posYFin){
         boolean resultado = false;
         if (tablero[posXIni][posYIni].ocupadaPorFicha()){
@@ -54,7 +51,6 @@ public class Tablero {
         }
         return resultado;
     }
-    */  
 
     private void inicializarTablero(){
         boolean esColorInicio = false;

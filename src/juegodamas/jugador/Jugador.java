@@ -15,15 +15,15 @@ public class Jugador {
             id[i] = (i+1);
         }
 
-        nombre[0] = "1. Liu";
-        nombre[1] = "2. San";
-        nombre[2] = "3. Tomoe";
+        nombre[0] = "1. Shrek";
+        nombre[1] = "2. Bowser";
+        nombre[2] = "3. Shadow";
         nombre[3] = "4. Adrien Agreste";
-        nombre[4] = "5. Ezra";
+        nombre[4] = "5. El Bicho";
         nombre[5] = "6. Anakin";
         nombre[6] = "7. Lord Farquaad";
         nombre[7] = "8. Jack";
-        nombre[8] = "9. Po";
+        nombre[8] = "9. Usagi";
         nombre[9] = "10. Mini-Me";
 
     }
