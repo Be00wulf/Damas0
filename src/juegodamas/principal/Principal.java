@@ -2,6 +2,7 @@ package juegodamas.principal;
 
 import java.util.Scanner;
 import juegodamas.jugador.Jugador;
+import juegodamas.pptlg.PiedraPTLS;
 import juegodamas.tablero.*;
 
 public class Principal {
@@ -55,9 +56,13 @@ public class Principal {
                     System.out.println("\nJUGAR");
                     System.out.println("Selecciona un jugador");
                     Jugador j1 = new Jugador();
-                    System.out.print("\t***Jugador 1***  " +  j1.seleccionarPersonaje() + "\n\n");
+                    System.out.print("\t***Jugador 1***  " +  j1.seleccionarPersonaje() + "\n\n\n\n");
                     Jugador j2 = new Jugador();
-                    System.out.print("\t***Jugador 2***  " +  j2.seleccionarPersonaje() + "\n\n");
+                    System.out.print("\t***Jugador 2***  " +  j2.seleccionarPersonaje() + "\n\n\n\n");
+                    
+                    System.out.println("DUELO INICIAL");
+                    PiedraPTLS p1 = new PiedraPTLS();
+                    System.out.println();
                     
                     
                     mostrarMenuPrincipal();
@@ -67,7 +72,6 @@ public class Principal {
                     System.out.println("\nTABLA DE PUNTUACIONES");
                     
                     mostrarMenuPrincipal();
-                    
                 break;
                 
                 case 3:
