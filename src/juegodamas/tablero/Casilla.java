@@ -7,11 +7,8 @@ public class Casilla {
     
     //colores
     public static final String ANSI_WHITE = "\u001B[37m";
-    public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
     public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_BLUE_BACKGROUND = "\u001B[44m";
-    public static final String ANSI_RESET = "\u001B[0m";
-    
+
     //constructor
     public Casilla(boolean esDeColor){
         this.esDeColor = esDeColor;
@@ -52,7 +49,7 @@ public class Casilla {
     
     //set get
     public void setFicha(Ficha ficha) {
-        this.ficha = ficha;
+        this.ficha = null;
     }
 
     public boolean getEsDeColor() {
@@ -64,4 +61,5 @@ public class Casilla {
         this.ficha = null;
         return tmp;
     }
+
 }

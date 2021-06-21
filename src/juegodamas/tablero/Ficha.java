@@ -2,7 +2,8 @@ package juegodamas.tablero;
 
 public class Ficha {
     //variables
-    private boolean esNegra;
+    private boolean esNegra, subir;
+    private Tablero tablero;
     private char celda = '░', celdaColor = '░';
     private String id;
     

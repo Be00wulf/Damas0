@@ -1,21 +1,43 @@
 package juegodamas.principal;
 
 import java.util.Scanner;
+import juegodamas.jugador.Jugador;
 import juegodamas.tablero.*;
 
 public class Principal {
+    Scanner entrada = new Scanner(System.in);
+    int menu;
+    
+    
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        int menu;
+        Principal p1 = new Principal();
+
         
+        //Tablero t1 = new Tablero(8, 8, true);
+        
+        //t1.pintarTablero();
+        /*System.out.println(t1.moverFicha(0, 0, 5, 5));
+        t1.pintarTablero();
+        
+        System.out.println(t1.moverFicha(2, 4, 2, 2));
+        t1.pintarTablero();*/
+    }
+    
+    public Principal(){
+        mostrarMenuPrincipal();
+    }
+    
+    
+    
+    public void mostrarMenuPrincipal(){
         System.out.println("⣇⣿⠘⣿⣿⣿⡿⡿⣟⣟⢟⢟⢝⠵⡝⣿⡿⢂⣼⣿⣷⣌⠩⡫⡻⣝⠹⢿⣿⣷\n" +
                             "⡆⣿⣆⠱⣝⡵⣝⢅⠙⣿⢕⢕⢕⢕⢝⣥⢒⠅⣿⣿⣿⡿⣳⣌⠪⡪⣡⢑⢝⣇\n" +
                             "⡆⣿⣿⣦⠹⣳⣳⣕⢅⠈⢗⢕⢕⢕⢕⢕⢈⢆⠟⠋⠉⠁⠉⠉⠁⠈⠼⢐⢕⢽\n" +
                             "⡗⢰⣶⣶⣦⣝⢝⢕⢕⠅⡆⢕⢕⢕⢕⢕⣴⠏⣠⡶⠛⡉⡉⡛⢶⣦⡀⠐⣕⢕\n" +
-                            "⡝⡄⢻⢟⣿⣿⣷⣕⣕⣅⣿⣔⣕⣵⣵⣿⣿⢠⣿⢠⣮⡈⣌⠨⠅⠹⣷⡀⢱⢕         BIENVENIDO AL JUEGO DE DAMAS\n" +
+                            "⡝⡄⢻⢟⣿⣿⣷⣕⣕⣅⣿⣔⣕⣵⣵⣿⣿⢠⣿⢠⣮⡈⣌⠨⠅⠹⣷⡀⢱⢕           JUEGO DE DAMAS\n" +
                             "⡝⡵⠟⠈⢀⣀⣀⡀⠉⢿⣿⣿⣿⣿⣿⣿⣿⣼⣿⢈⡋⠴⢿⡟⣡⡇⣿⡇⡀⢕\n" +
-                            "⡝⠁⣠⣾⠟⡉⡉⡉⠻⣦⣻⣿⣿⣿⣿⣿⣿⣿⣿⣧⠸⣿⣦⣥⣿⡇⡿⣰⢗⢄          1. Ver jugadores\n" +
-                            "⠁⢰⣿⡏⣴⣌⠈⣌⠡⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣬⣉⣉⣁⣄⢖⢕⢕⢕          2. Seleccionar jugador\n" +
+                            "⡝⠁⣠⣾⠟⡉⡉⡉⠻⣦⣻⣿⣿⣿⣿⣿⣿⣿⣿⣧⠸⣿⣦⣥⣿⡇⡿⣰⢗⢄          1. JUGAR\n" +
+                            "⠁⢰⣿⡏⣴⣌⠈⣌⠡⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣬⣉⣉⣁⣄⢖⢕⢕⢕          2. VER TABLA DE PUNTUACIONES\n" +
                             "⡀⢻⣿⡇⢙⠁⠴⢿⡟⣡⡆⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣵⣵⣿          3. Salir\n" +
                             "⡻⣄⣻⣿⣌⠘⢿⣷⣥⣿⠇⣿⣿⣿⣿⣿⣿⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n" +
                             "⣷⢄⠻⣿⣟⠿⠦⠍⠉⣡⣾⣿⣿⣿⣿⣿⣿⢸⣿⣦⠙⣿⣿⣿⣿⣿⣿⣿⣿⠟\n" +
@@ -30,11 +52,22 @@ public class Principal {
 
             switch(menu){
                 case 1:
-                    System.out.println("\nJUGADORES");
+                    System.out.println("\nJUGAR");
+                    System.out.println("Selecciona un jugador");
+                    Jugador j1 = new Jugador();
+                    System.out.print("\t***Jugador 1***  " +  j1.seleccionarPersonaje() + "\n\n");
+                    Jugador j2 = new Jugador();
+                    System.out.print("\t***Jugador 2***  " +  j2.seleccionarPersonaje() + "\n\n");
+                    
+                    
+                    mostrarMenuPrincipal();
                 break;
                 
                 case 2:
-                    System.out.println("\nSELECCIONA UN JUGADOR");
+                    System.out.println("\nTABLA DE PUNTUACIONES");
+                    
+                    mostrarMenuPrincipal();
+                    
                 break;
                 
                 case 3:
@@ -45,22 +78,7 @@ public class Principal {
             }
    
         } while (menu < 1 || menu > 3);
-        
-        
-        
-        
-        
-        //Tablero t1 = new Tablero(8, 8, true);
-        
-        //t1.pintarTablero();
-        /*System.out.println(t1.moverFicha(0, 0, 5, 5));
-        t1.pintarTablero();
-        
-        System.out.println(t1.moverFicha(2, 4, 2, 2));
-        t1.pintarTablero();*/
     }
     
-    
-    
-   
+
 }
