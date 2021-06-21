@@ -25,17 +25,18 @@ public class Jugador {
         nombre[7] = "8. Jack";
         nombre[8] = "9. Po";
         nombre[9] = "10. Mini-Me";
-        
-        est();
 
     }
     
     //metodos
-    public void est(){
+    public String est(){
         partidasGanadas[0] = 1;
+        System.out.println(nombre[0] + ",    Puntuacion: " + partidasGanadas[0]);
         for (int i = 1; i < 10; i++) {
             partidasGanadas[i] = 0;
+            System.out.println(nombre[i] +  ",    Puntuacion: " + partidasGanadas[i]);
         }
+        return "";
     }
     
     public String seleccionarPersonaje(){

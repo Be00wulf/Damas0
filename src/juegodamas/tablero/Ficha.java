@@ -2,7 +2,7 @@ package juegodamas.tablero;
 
 public class Ficha {
     //variables
-    private boolean esNegra, subir;
+    private boolean esNegra;
     private Tablero tablero;
     private char celda = '░', celdaColor = '░';
     private String id;
@@ -15,8 +15,14 @@ public class Ficha {
     public Ficha(boolean esNegra, String id){
         this.esNegra = esNegra;
         this.id = id;
+        
     }
     
+    //mm
+    public boolean getEsNegra() {
+    return esNegra;
+    }
+
     //get set
     public String getCaracter(){
         String res =(esNegra)?"" + ANSI_PURPLE + celda: "" + ANSI_RED + celda;

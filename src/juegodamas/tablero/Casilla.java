@@ -38,7 +38,7 @@ public class Casilla {
             if ((linea == 0)||(linea == 2))
                 res=""+ color + casillaColor + casillaColor + ficha.getCaracter() + ficha.getCaracter() + color+ casillaColor + casillaColor;
             if (linea == 1)
-                res="" + color+casillaColor+  ficha.getCaracter()+    ficha.getId()      +ficha.getCaracter()       +color+casillaColor;
+                res="" + color+casillaColor+ficha.getCaracter()+ficha.getId()+ficha.getCaracter()+color+casillaColor;
    
         }else{
             res =""+ color+casillaColor+casillaColor+casillaColor+casillaColor+casillaColor+casillaColor;
