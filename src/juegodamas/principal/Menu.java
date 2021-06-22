@@ -9,7 +9,7 @@ import juegodamas.tablero.Tablero;
 public class Menu {
     Scanner entrada = new Scanner(System.in);
     int menuSel, pX, pY, mX, mY;
-    int ficha1 = 2;
+    int ficha1 = 65;
     int sel;
     
     //const
@@ -98,12 +98,5 @@ public class Menu {
    
         } while (menuSel < 1 || menuSel > 3);
     }
-    
-    
-    
-    
-    
-    
-    
     
 }
